@@ -1,0 +1,17 @@
+<md-content layout="row" layout-wrap >
+ <div flex="50" ng-repeat="pokemon in list.pokemons">
+ 	<md-card flex>
+  <img ng-src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/{{pokemon.name | lowercase}}.png" class="md-card-image">
+  <md-card-title>
+    <md-card-title-text>
+      <span class="md-headline">{{pokemon.name | camelcase | nidoran}}</span>
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-actions layout="row" layout-align="end center">
+    <md-button class="md-icon-button" aria-label="Favorite">
+	    <md-icon>favorite</md-icon>
+	  </md-button>
+  </md-card-actions>
+</md-card>
+ </div>
+</md-content>

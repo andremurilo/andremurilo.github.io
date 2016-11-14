@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="PokeCandies" ng-cloak>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pokécandies</title>
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="bower_components/angular-material/angular-material.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+  <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+  <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/config/config.js"></script>
+  <script src="js/services/firebaseAuth.js"></script>
+  <script src="js/controllers/HomeController.js"></script>
+  <script src="js/controllers/ListController.js"></script>
+  <script src="js/filters/filters.js"></script>
+  <script>
+  	var config = {
+      apiKey: 'AIzaSyCAwKfKOL7ae65ALhi2h6hf4otyyWaLVNw',
+      authDomain: 'pokecandies-149204.firebaseapp.com'
+    };
+
+    firebase.initializeApp(config);
+  </script>
+</head>
+<body ng-controller="homeCtrl as home">
+
+<div class="container">
+	<div layout="column">
+  <md-toolbar md-whiteframe="3">
+    <div class="md-toolbar-tools" layout="row">
+      <span>{{ home.title }}</span>
+      <span flex></span>
+      <md-button ng-click="home.googleSignIn()" ng-if="!home.logged" class="md-raised google-signin">Sign In</md-button>
+			<md-menu md-position-mode="target-right target" md-offset="0px 40px" ng-if="home.logged">
+			 <img src="{{ home.photoURL }}" class="md-avatar" md-whiteframe="3" ng-click="$mdOpenMenu($event)">
+			 <md-menu-content>
+			   <md-menu-item>
+		   			<md-button ng-click="home.googleSignOut()">Logout</md-button>
+	   			</md-menu-item>
+			 </md-menu-content>
+			</md-menu>
+
+    </div>
+  </md-toolbar>
+</div>
+	<ng-view> </ng-view>
+</div>
+</body>
+</html>
