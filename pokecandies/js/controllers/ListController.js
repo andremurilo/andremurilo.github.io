@@ -13,7 +13,6 @@ app.controller('ListController', function($http, localStorageService){
                     }
                 });
 			vm.pokemons.splice(0, 1);
-			console.log(vm.pokemons)
 		})
 	}
 
