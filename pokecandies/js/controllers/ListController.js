@@ -16,5 +16,6 @@ app.controller('ListController', function($http, localStorageService){
 		})
 	}
 
+
 	vm.getPokemons();
 })

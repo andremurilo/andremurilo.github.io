@@ -14,6 +14,7 @@ app.controller('homeCtrl', function($scope, $mdToast, localStorageService, fireb
                     );
         }else{
             vm.logged = false;
+            localStorageService.remove('token');
             $mdToast.show(
                 $mdToast.simple()
                     .textContent("Deslogado com sucesso")

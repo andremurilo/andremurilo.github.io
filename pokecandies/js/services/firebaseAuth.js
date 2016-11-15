@@ -1,4 +1,4 @@
-app.service("firebaseAuth", function($mdToast, localStorageService){
+app.service("firebaseAuth", function($mdToast, localStorageService, $location){
 	var vm = this
 	
 	var provider = new firebase.auth.GoogleAuthProvider();
@@ -32,6 +32,10 @@ app.service("firebaseAuth", function($mdToast, localStorageService){
 
 	function logout(){
 		firebase.auth().signOut()
+			.then(function(){
+				localStorageService.remove('token');
+				$location.path("/#/");
+			})
 			.catch(function(error){
 				$mdToast.show(
                     $mdToast.simple()
