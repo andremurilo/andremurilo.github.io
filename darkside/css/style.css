@@ -1,0 +1,270 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+a{
+	color: #cccccc;
+}
+
+a, p{
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+
+body{
+	font-family: 'Text Me One', sans-serif;
+	background-color: #121212;
+}
+
+.opcoes{
+	float: left;
+	position: fixed;
+	top: 70px;
+	padding: 10px;
+	background-color: #000;
+	display: block;
+	z-index: 9999;
+}
+
+.container{
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+header{
+	width: 100%;
+	display: block;
+	height: 65px;
+	background-color: #121212;
+	position: fixed;
+	z-index: 9999;
+}
+
+.logo{
+	float: left;
+	width: 20%;
+	height: 50px;
+	padding-top: 10px;
+	font-size: 2.6em;
+	color: #dedede;
+}
+
+.menu ul{
+	list-style: none;
+	float: right;
+}
+
+.menu li{
+	display: inline-block;
+	padding: 12px 40px;
+}
+
+.menu li:hover{
+	border-bottom: 2px solid #dedede;
+}
+
+.borda{
+	border-bottom: 2px solid #dedede;	
+}
+
+.menu a{
+	text-decoration: none;
+	font-size: 1.6em;
+}
+.capa{
+	height: 100vh;
+
+}
+
+.rslides {
+  position: fixed;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: -9;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  -webkit-filter: brightness(0.5) blur(4px);
+  }
+
+.imperio{
+	width: 100%;
+	margin-top: 65px;
+	height: 80vh;
+	float: left;
+	display: block;
+	position: relative;
+	z-index: 9;
+	text-align: center;
+}
+
+.imperio img{
+	display: block;
+	margin: 0 auto;
+	margin-top: 5%;
+	width: 17%;
+	-webkit-filter: brightness(0.9);
+}
+
+h1{
+	font-family: Pacifico, sans-serif;
+	color: #dedede;
+	font-size: 3em;
+	display: block;
+	margin: 0 30%;
+	width: 40%;
+	float: left;
+	font-weight: 100;
+	border-bottom: 4px solid #dedede;
+}
+
+h2, h3{
+	font-family: 'Text Me One', sans-serif;
+	font-size: 3em;
+	color: #dedede;
+	display: block;
+	margin: 0 30%;
+	width: 40%;
+	float: left;
+	font-weight: 100;
+}
+
+h3{
+	font-size: 2.4em;
+}
+
+.conteudo{
+	width: 100%;
+	height: auto;
+	margin-top: 0;
+	padding-bottom: 5%;
+	background-color: #121212;
+	display: block;
+	float: left;
+	z-index: 99;
+	clear: both;
+}
+
+.conteudo h2{
+	width: 100%;
+	display: block;
+	float: left;
+	margin: 0;
+}
+
+.historia p{
+	color: #dedede;
+	width: 100%;
+	display: block;
+	margin: 8% 0;
+}
+
+.historia article{
+	display: inline-block;
+	float: left;
+	width: 30%;
+	margin: 0 1.6%;
+}
+
+.historia img{
+	width: 50%;
+	margin: 0 25%;
+	margin-bottom: 15%;
+	float: left;
+}
+
+.historia article p{
+	text-align: center;
+	color: #dedede;
+}
+
+.cultura{
+	width: 100%;
+	display: block;
+	background-color: #121212;
+}
+
+.contato{
+	width: 100%;
+	display: block;
+	background-color: #121212;
+}
+
+form{
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	
+}
+
+form div{
+	display: inline-block;
+	width: 94%;
+	margin: 1% 4%;
+}
+
+form label{
+	color: #dedede;
+	font-size: 1.3em;
+	font-style: italic;
+	margin-bottom: 5px;
+}
+
+form input{
+	width: 100%;
+	border: none;
+	height: 30px;
+	padding: 5px;
+	font-size: 1.2em;
+	background-color: #dedede;
+	font-family: 'Text Me One', sans-serif;
+}
+
+textarea{
+	width: 100%;
+	border: none;
+	font-size: 1.2em;
+	background-color: #dedede;
+	font-family: 'Text Me One', sans-serif;
+}
+
+footer{
+	width: 100%;
+	display: block;
+	height: 40px;
+	background: #000;
+	z-index: 999;
+	float: left;
+	text-align: center;
+	padding-top: 10px;
+}
+
+footer p{
+	display: inline;
+	color: #dedede;
+}

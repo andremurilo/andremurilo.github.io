@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Star Wars</title>
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Text+Me+One' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/responsiveslides.min.js"></script>
+	<script src="js/scroll.js"></script>
+	<style>
+		#slides{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="opcoes" id="opcoes">
+		<span><a title="Ir direto para conteúdo" id="conteudo" href="#historia">Ir para conteúdo</a></span> <br>
+		<span><a title="Diminuir tamanho da fonte" id="diminui" href="#!">A-</a></span>
+		<span><a title="Aumentar tamanho da fotne" id="aumenta" href="#!">A+</a></span><br>
+		<span><a title="Ativar modo Alto Contraste" id="contraste" href="#!">Contraste</a></span>
+	</div>
+	<header>
+		<div class="container">
+			<div class="logo" id="logo" lang="en">DARK SIDE</div>
+			<div class="menu" id="menu">
+				<ul>
+					<li><a href="#inicio">Início</a></li>
+					<li><a href="#historia">História</a></li>
+					<li><a href="#contato">Contato</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<section class="capa" id="inicio">
+		<ul class="rslides">
+			<li><img src="img/d2.jpg" alt="Piloto de nave do Império"></li>
+			<li><img src="img/d3.jpg" alt="Kylo Ren usando a força"></li>
+			<li><img src="img/d10.jpg" alt="Star Destroyer em órbita"></li>
+		</ul>
+		<div class="imperio">
+			<img src="img/empire.png" alt="Símbolo do Império Galático">
+			<h1>Junte-se</h1>
+			<h2>ao lado sombrio da força</h2>
+		</div>
+	</section>
+	<section class="historia conteudo" id="historia">
+		<div class="container">
+			<h2>História</h2>
+			<p>O lado sombrio da Força, também conhecido como lado negro da Força[1], chamado de Bogan ou de Boga pelos antigos Jedi, era o instrumento principal dos Lordes Sith, e o maior inimigo da Ordem Jedi. Oposto ao lado luminoso da Força, seu poder vinha das emoções negativas e fortes. Era associado com morte e destruição. O lado sombrio da Força seduziu muitos Jedi, como Anakin Skywalker, que passou a ser conhecido como Darth Vader, e Jacen Solo, que passou a ser conhecido como Darth Caedus. O Lado sombrio é temido pelos Jedi desde tempos remotos. Os padawans são sempre alertados pelos seus Mestres de que eles devem evitar os sentimentos sombrios, como raiva, medo, frustração, inveja e principalmente (o sentimento que é tido como o "combustível" de quem é adepto ao lado sombrio) o ódio. Muito frequentemente, os Sith tentam seduzir os Jedi com menos experiência porém com grande potencial para o lado sombrio. Alguns poderes do lado sombrio têm caráter sobrenatural.</p>
+				
+			<article id="nave">
+				<img src="img/tieg.png" alt="Nave Tie Fighter">
+				<h3>Naves</h3>
+				<p>A nave de um único assento e de curta distancia não tem um hyperdrive, e como tal exige ser descarregada de bases de lançamento e naves de grande porte. Apresenta dois canhões laser de fogo-ligado no queixo da cabina do piloto em forma de bola.</p>
+			</article>
+			<article id="sabre">
+				<img src="img/dark256.png" alt="Sabre de luz vermelho">
+				<h3>Sabres</h3>
+				<p>O Sabre pode cortar quase qualquer coisa, com a exceção de outro Sabre de Luz. As cores dos sabres vermelhos eram originados dos cristais sintéticos dos Sith, por não terem acesso à caverna de cristais em Ilum.</p>
+			</article>
+			<article id="arma">
+				<img src="img/deathgray.png" alt="Estrela da morte">
+				<h3>Armas</h3>
+				<p>É uma gigantesca estação espacial esférica, com 140 km de diâmetro. Carrega milhares de soldados (stormtroopers), caças TIE e caças TIE avançados como o de Darth Vader, mas sua arma maior é o superlaser que possui um formato de uma gigantesca cratera, que causa a destruição total de planetas.</p>
+			</article>
+		</div>
+	</section>
+	
+	<section class="contato conteudo" id="contato">
+		<div class="container">
+			<h2>Contato</h2>
+			<form action="#">
+				<div>
+					<label for="nome">Nome:</label><br>
+					<input id="nome" type="text" name="nome">
+				</div>
+				<div>
+					<label for="email">Email:</label><br>
+					<input id="email" type="email" name="email">
+				</div>
+				<div>
+					<label for="mensagem">Mensagem:</label><br>
+					<textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+				</div>
+				<div>
+					<input type="submit" value="Enviar">
+				</div>
+			</form>
+		</div>
+	</section>
+	
+	<footer>
+		<div class="container">
+			<p>Todos os direitos reservados.</p>
+			<a id="topo" href="#inicio">Voltar para o topo</a>
+		</div>	
+	</footer>
+	<script>
+		$(function () {
+			$(".rslides").responsiveSlides({
+				auto: true,
+				speed: 700,
+				timeout: 5000,
+				pager: false,
+				nav: false,
+				pauseControls: false,
+				maxWidth: 1920
+			});
+
+			// $('#menu').onePageNav();
+
+			$('#aumenta').click(function () {
+				curSize = parseInt($('.conteudo p').css('font-size')) + 2;
+				if (curSize <= 26)
+					$('.conteudo p').css('font-size', curSize + 'px');
+			});
+			
+			$('#diminui').click(function () {
+				curSize = parseInt($('.conteudo p').css('font-size')) - 2;
+				if (curSize >= 12)
+					$('.conteudo p').css('font-size', curSize + 'px');
+			});
+			
+			var count = 0;
+			$('#contraste').click(function(){
+				count++;
+				if(count % 2 === 1){
+					$('.conteudo').css({backgroundColor: 'black'});
+					$('.conteudo p').css({color: 'white'});
+				}else{
+					$('.conteudo').css({backgroundColor: '#121212'});
+					$('.conteudo p').css({color: 'dedede'});
+				}
+			})
+		});
+	</script>
+</body>
+</html>
